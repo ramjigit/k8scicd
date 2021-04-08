@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             agent { 
-                docker { 
+                kubernetes  { 
                     image 'golang' 
                 }
             }
@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Test') {
             agent { 
-                docker { 
+                kubernetes  { 
                     image 'golang' 
                 }
             }
